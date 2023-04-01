@@ -17,7 +17,11 @@ class StudentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name(),
+            'nis' => $this->faker->unique()->nik(),
+            'username' => $this->faker->unique()->userName(),
+            'password' => bcrypt('12345'),
+            'level' => 'student',
         ];
     }
 }
