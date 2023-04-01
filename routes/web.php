@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardStudentController;
+use App\Http\Controllers\DashboardTeacherController;
 
 
 
@@ -22,3 +23,4 @@ Route::get('/dashboard', function () {
 })->middleware('auth:user,student');
 
 Route::resource('/dashboard/admin/data/student', DashboardStudentController::class)->middleware('auth:user');
+Route::resource('/dashboard/admin/data/teacher', DashboardTeacherController::class)->middleware('auth:user');

@@ -23,7 +23,8 @@
                 <form action="/login" method="POST">
                     @csrf
                     <div class="form-floating mb-2">
-                        <input type="text" name="username" class="form-control" id="username" required>
+                        <input type="text" name="username" class="form-control" id="username" placeholder="Username"
+                            required autofocus>
                         <label for="username">Username</label>
 
 

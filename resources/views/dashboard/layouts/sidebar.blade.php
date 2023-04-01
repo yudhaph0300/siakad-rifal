@@ -17,7 +17,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('') ? 'active' : '' }}" aria-current="page" href="">
+                    <a class="nav-link {{ Request::is('dashboard/admin/data/teacher*') ? 'active' : '' }}"
+                        aria-current="page" href="/dashboard/admin/data/teacher">
                         <span data-feather="users"></span>
                         Data Guru
                     </a>
