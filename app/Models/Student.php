@@ -18,4 +18,8 @@ class Student extends Authenticatable
         'password',
         'remember_token',
     ];
+    public function getRouteKeyName()
+    {
+        return 'nis';
+    }
 }
