@@ -20,7 +20,7 @@ Route::post('/logout',  [LoginController::class, 'logout']);
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
-})->middleware('auth:user,student');
+})->middleware('auth:user,student,teacher');
 
 Route::resource('/dashboard/admin/data/student', DashboardStudentController::class)->middleware('auth:user');
 Route::resource('/dashboard/admin/data/teacher', DashboardTeacherController::class)->middleware('auth:user');

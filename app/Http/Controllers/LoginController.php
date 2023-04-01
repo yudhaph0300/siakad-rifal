@@ -24,6 +24,9 @@ class LoginController extends Controller
         } elseif (Auth::guard('user')->attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/dashboard');
+        } elseif (Auth::guard('teacher')->attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/dashboard');
         }
 
         return redirect('/');
@@ -35,6 +38,8 @@ class LoginController extends Controller
             Auth::guard('student')->logout();
         } elseif (Auth::guard('user')->check()) {
             Auth::guard('user')->logout();
+        } elseif (Auth::guard('teacher')->check()) {
+            Auth::guard('teacher')->logout();
         }
         return redirect('/');
     }

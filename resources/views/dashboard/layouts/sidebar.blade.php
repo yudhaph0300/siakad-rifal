@@ -40,6 +40,21 @@
                 </li>
             @endif
 
+            @if (auth()->user()->level == 'teacher')
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('') ? 'active' : '' }}" aria-current="page" href="">
+                        <span data-feather="home"></span>
+                        Mata Pelajaran
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('') ? 'active' : '' }}" aria-current="page" href="">
+                        <span data-feather="home"></span>
+                        Jadwal Mengajar
+                    </a>
+                </li>
+            @endif
+
         </ul>
 
     </div>
