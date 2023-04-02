@@ -16,7 +16,7 @@
     {{-- My Css --}}
     <link rel="stylesheet" href="css/style.css">
 
-    <title>MTs Rifal | Lorem Ipsum</title>
+    <title>MTs RIFAL | Lorem Ipsum</title>
 </head>
 
 <body>
