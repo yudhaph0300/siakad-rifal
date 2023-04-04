@@ -19,6 +19,20 @@
                 <input type="text" class="form-control" name="nis" id="nis"
                     value="{{ old('nis', $student->nis) }}" required>
             </div>
+
+            <div class="form-group mb-3">
+                <label for="kelas" class="form-label">Kelas</label>
+                <select class="form-select" name="kelas_id" required>
+                    @foreach ($kelas as $kls)
+                        @if (old('kelas_id') == $kls->id)
+                            <option value="{{ $kls->id }}" selected>{{ $kls->name }}</option>
+                        @else
+                            <option value="{{ $kls->id }}">{{ $kls->name }}</option>
+                        @endif
+                    @endforeach
+                </select>
+
+            </div>
             <button type="submit" class="btn btn-primary">Update Data</button>
         </form>
     </div>

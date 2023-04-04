@@ -22,4 +22,8 @@ class Student extends Authenticatable
     {
         return 'nis';
     }
+    public function kelas()
+    {
+        return $this->belongsTo(Kelas::class, 'kelas_id');
+    }
 }

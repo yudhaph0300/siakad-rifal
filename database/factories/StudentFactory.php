@@ -22,6 +22,7 @@ class StudentFactory extends Factory
             'username' => $this->faker->unique()->userName(),
             'password' => bcrypt('12345'),
             'level' => 'student',
+            'kelas_id' => mt_rand(1, 6)
         ];
     }
 }

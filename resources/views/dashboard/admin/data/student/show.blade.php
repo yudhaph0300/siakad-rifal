@@ -29,7 +29,7 @@
                         </tr>
                         <tr>
                             <th>Kelas</th>
-                            <td>VIII B</td>
+                            <td>{{ $student->kelas->name }}</td>
                         </tr>
                     </tbody>
                 </table>

@@ -23,6 +23,13 @@
                         Data Guru
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('dashboard/admin/data/kelas*') ? 'active' : '' }}"
+                        aria-current="page" href="/dashboard/admin/data/kelas">
+                        <span data-feather="columns"></span>
+                        Data Kelas
+                    </a>
+                </li>
             @endif
 
             @if (auth()->user()->level == 'student')

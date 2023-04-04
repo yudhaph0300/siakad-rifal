@@ -13,36 +13,39 @@
     <title>Hello, world!</title>
 </head>
 
-<body>
-
+<body
+    style="background: rgb(223,37,232); background: linear-gradient(90deg, rgba(223,37,232,1) 0%, rgba(0,212,255,1) 100%);">
 
     <div class="row justify-content-center mt-5">
-        <div class="col-md-5">
-            <main class="form-signin">
-                <h1 class="h3 mb-3 fw-normal">Login Page</h1>
-                <form action="/login" method="POST">
-                    @csrf
-                    <div class="form-floating mb-2">
-                        <input type="text" name="username" class="form-control" id="username" placeholder="Username"
-                            required autofocus>
-                        <label for="username">Username</label>
+        <div class="col-10 col-lg-4 col-md-6 col-sm-8 mt-5">
+            <div class="card py-4 px-4">
+                <div class="card-body">
+                    <h3 class="card-title text-center  mb-5">Login</h3>
+                    <main class="form-signin">
+                        <form action="/login" method="POST">
+                            @csrf
+                            <div class="form-floating mb-4">
+                                <input type="text" name="username" class="form-control" id="username"
+                                    placeholder="Username" required autofocus>
+                                <label for="username">Username</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <input type="password" name="password" class="form-control  " id="password"
+                                    placeholder="Password" required>
+                                <label for="password">Password</label>
+                            </div>
 
+                            <div class="border-top"></div>
 
-                    </div>
-                    <div class="form-floating mb-4">
-                        <input type="password" name="password" class="form-control  " id="password"
-                            placeholder="Password" required>
-                        <label for="password">Password</label>
-
-                    </div>
-
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
-
-                </form>
-
-            </main>
+                            <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Login</button>
+                        </form>
+                    </main>
+                </div>
+            </div>
         </div>
     </div>
+
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 

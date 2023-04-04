@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use \App\Models\User;
 use \App\Models\Student;
 use \App\Models\Teacher;
+use \App\Models\Kelas;
 
 class DatabaseSeeder extends Seeder
 {
@@ -33,5 +34,24 @@ class DatabaseSeeder extends Seeder
         ]);
         Teacher::factory(12)->create();
         Student::factory(12)->create();
+
+        Kelas::create([
+            'name' => 'VII A',
+        ]);
+        Kelas::create([
+            'name' => 'VII B',
+        ]);
+        Kelas::create([
+            'name' => 'VIII A',
+        ]);
+        Kelas::create([
+            'name' => 'VIII B',
+        ]);
+        Kelas::create([
+            'name' => 'IX A',
+        ]);
+        Kelas::create([
+            'name' => 'IX B',
+        ]);
     }
 }

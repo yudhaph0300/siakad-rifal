@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\Kelas;
 use Illuminate\Contracts\Support\ValidatedData;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,9 @@ class DashboardStudentController extends Controller
      */
     public function create()
     {
-        return view('dashboard.admin.data.student.create');
+        return view('dashboard.admin.data.student.create', [
+            'kelas' => Kelas::all()
+        ]);
     }
 
     /**
@@ -32,6 +35,7 @@ class DashboardStudentController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'nis' => 'required',
+            'kelas_id' => 'required',
         ]);
 
         $validatedData['username'] = $request['nis'];
@@ -56,7 +60,8 @@ class DashboardStudentController extends Controller
     public function edit(Student $student)
     {
         return view('dashboard.admin.data.student.edit', [
-            'student' => $student
+            'student' => $student,
+            'kelas' => Kelas::all()
         ]);
     }
 
@@ -67,7 +72,8 @@ class DashboardStudentController extends Controller
     {
         $rules = [
             'name' => 'required',
-            'nis' => 'required'
+            'nis' => 'required',
+            'kelas_id' => 'required'
         ];
         $validatedData = $request->validate($rules);
 
